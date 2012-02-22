@@ -10,4 +10,5 @@ Built on :
   * [Bootstrap] (https://github.com/twitter/bootstrap/)
 
 ## License
+
 Specific parts are under the AGPL v3 license
