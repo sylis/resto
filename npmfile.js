@@ -1,1 +1,2 @@
-require('ejs-ext');
+//require('ejs-ext');
+require('jade-ext');
