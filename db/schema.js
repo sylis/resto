@@ -4,3 +4,16 @@ define('User', function () {
     property('activated', Boolean, {default: false});
 });
 
+var Restaurant = describe('Restaurant', function () {
+    property('name', String);
+    property('address', String);
+    property('phone', String);
+    property('website', String);
+    property('type', String);
+});var Restaurant = describe('Restaurant', function () {
+    property('name', String);
+    property('address', String);
+    property('phone', String);
+    property('website', String);
+    property('type', String);
+});

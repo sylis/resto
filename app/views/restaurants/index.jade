@@ -1,0 +1,15 @@
+.page-header
+  h1 Index of restaurants
+
+- restaurants.forEach(function (restaurant) {
+  .row
+    .span-two-thirds= 'restaurant #' + restaurant.id
+    .span-one-third
+      != link_to('Edit', path_to.edit_restaurant(restaurant), {class: 'btn primary'}) + ' '
+      != link_to('Delete', path_to.restaurant(restaurant), {class: 'btn danger', method: 'delete', remote: true, jsonp: '(function (u) {location.href = u;})'})
+- });
+
+hr
+
+.well
+  != link_to('New restaurant', path_to.new_restaurant, {class: 'btn'})

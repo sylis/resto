@@ -1,0 +1,10 @@
+.page-header
+  h1 Edit restaurant
+
+- form_for(restaurant, {action: path_to.restaurant(restaurant), method: 'PUT', id: "restaurant_form"}, function (form) {
+  != partial('restaurants/form.jade', {locals: {form: form, restaurant: restaurant}})
+  .actions
+    != form.submit('Update restaurant', {class: 'btn primary'})
+    span= ' or '
+    != link_to('Cancel', path_to.restaurant(restaurant), {class: 'btn'})
+- });

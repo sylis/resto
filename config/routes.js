@@ -1,4 +1,5 @@
 exports.routes = function (map) {
+    map.resources('restaurants');
     map.root('home#index');
 
 

@@ -1,0 +1,15 @@
+.page-header
+  h1 Details of restaurant
+
+div(about=path_to.restaurant(restaurant))
+  .field(property='name')= restaurant.name
+  .field(property='address')= restaurant.address
+  .field(property='phone')= restaurant.phone
+  .field(property='website')= restaurant.website
+  .field(property='type')= restaurant.type
+
+.actions
+  != link_to('Edit', path_to.edit_restaurant(restaurant), {class: 'btn primary'}) + ' '
+  != link_to('Delete', path_to.restaurant(restaurant), {class: 'btn danger', method: 'delete', remote: true, jsonp: '(function (u) { location.href = u; })'})
+  span= ' or '
+  != link_to('Back to index', path_to.restaurants)
